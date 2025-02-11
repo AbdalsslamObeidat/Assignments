@@ -1,0 +1,58 @@
+*{
+    /* ommiting all default values for padding & margins for all elements */
+
+    /* calculating the padding & border from the width of the element */
+    box-sizing: border-box;
+}
+/* .a{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: orangered;
+    
+}
+
+.b{
+    font-size: 20px;
+    text-decoration: none;
+    background-color: orangered;
+    border: 1px solid rgb(192, 52, 1);
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    display: block;
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    
+    
+    
+
+} */
+.flex-col{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    
+}
+.flex-row{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+} 
+
+div{
+    padding: 10px;
+    border: 1px solid red;
+    
+}
+.flex1{
+flex: 1;
+}
+.flex3{
+flex: 3;
+}
