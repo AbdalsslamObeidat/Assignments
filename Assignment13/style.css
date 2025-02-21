@@ -158,7 +158,6 @@
     padding: 8px;
     margin: 5px 40px;
     width: fit-content;
-    align-items: flex-end;
     border-radius: 12px;
     align-self: flex-end;
 
@@ -171,7 +170,7 @@
     padding: 8px;
     margin: 5px 40px;
     width: fit-content;
-    align-items: flex-start;
+    align-self: flex-start;
     border-radius: 12px;
 
 }
