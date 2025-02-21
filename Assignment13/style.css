@@ -19,10 +19,9 @@
     height: 100vh;
     align-items: center;
     display: flex;
-    width:50px;
+    width:60px;
     background-color: #202c33;
     color: white;
-    padding: 15px;
     flex-direction: column;
     justify-content: space-between;
     
@@ -66,9 +65,10 @@
     background-color: #202c33;
 }
 .header{
-    padding: 15px 10px;
+    padding: 0px 10px;
     height: 25vh;
     background-color: #111b21;
+    width: 100%;
 
 }
 .header-item{
@@ -82,7 +82,7 @@
     height: 35px; width: 35px; border-radius: 50%; margin:0 10px;
 }
 .colFlex_{
-    display: flex; flex-direction: column; justify-content: space-between;   
+    display: flex; flex-direction: column; justify-content: space-between; align-items: center;  
 
 }
 .colFlex{
@@ -172,5 +172,15 @@
     width: fit-content;
     align-items: flex-start;
     border-radius: 12px;
+
+}
+.icon-small{
+    height: 24px;width: 24px;
+    margin: 12px;
+}
+.icon-large{
+    height: 32px;width: 32px;
+    margin: 12px;
+    border-radius: 50%;
 
 }
