@@ -143,12 +143,13 @@
     color: white;
 }
 .sendTxt{
-    width: 75%;
+    width: 85%;
     background-color: #2a3942;
     border: none;
     border-radius: 12px;
     padding: 5px 10px ;
     align-content: center;
+    height: 45px;
 }
 .sentMsg{
     color: white;
