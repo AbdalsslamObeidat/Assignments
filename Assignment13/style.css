@@ -170,6 +170,7 @@
     padding: 8px;
     margin: 5px 40px;
     width: fit-content;
+    align-self: flex-start;
     border-radius: 12px;
     align-self: flex-start;
 
