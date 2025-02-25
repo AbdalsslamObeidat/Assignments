@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    max-width:850px ;
+    max-width: 1400px ;
     background-color: #111b21;
     min-width: 324px;
 }
@@ -50,7 +50,6 @@
     display: flex;
     flex-direction: column;
     padding: 10px 10px;
-    height: 25vh;
     background-color: #111b21;
     min-width: 320px;
 }
@@ -68,7 +67,6 @@
     background-color: #111b21;
     display: flex;
     flex-direction: column;
-    height: 75vh;
     overflow: auto;
 }
 .msgItem{
@@ -186,4 +184,10 @@
     margin: 12px;
     border-radius: 50%;
 
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
 }
