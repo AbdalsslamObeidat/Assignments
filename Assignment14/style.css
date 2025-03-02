@@ -1,0 +1,28 @@
+div {
+    border: 1px solid black;
+    animation: Anime 3s infinite;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+
+@keyframes Anime {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(100px, 0);
+    }
+    40% {
+        transform: translate(0, 100px);
+    }
+    60% {
+        transform: translate(100px, 100px);
+    }
+    80% {
+        transform: translate(100px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
