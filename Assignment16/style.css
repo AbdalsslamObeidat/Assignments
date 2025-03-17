@@ -46,6 +46,10 @@
   border-top: 1px solid;
 }
 
+.nav-item {
+  color: white;
+  text-decoration: none;
+}
 
 
 
@@ -59,15 +63,19 @@
 
 /* Centering sections in 4k View */
 
-.UW{
+.UW-H ,.UW-S{
   width: 100%;
 }
 
 @media (min-width: 2560px) {
-  .UW{
+  .UW-H{
       flex: 0 0 auto;
-      width: 75% !important;
+      width: 70% !important;
   }
+  .UW-S{
+    flex: 0 0 auto;
+    width: 55% !important;
+}
 }
 
 
