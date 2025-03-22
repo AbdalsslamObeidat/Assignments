@@ -7,7 +7,7 @@
 }
 
 .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.25rem #2491ff !important; /* Blue glow */
+  box-shadow: 0 0 0 0.25rem #2491ff !important; 
 }
 .navbar-toggler {
   padding: 16px !important;
@@ -28,9 +28,7 @@
   font-weight: 600;
   width: calc(100% - 12px);
 }
-.sec1{
-  background-color: transparent;
-}
+
 
 .text-center {
   text-align: center;
@@ -88,37 +86,35 @@
 
 
 .responsive-text1 {
-  font-size: 1.813rem !important; /* Font size for tablets and smaller */
+  font-size: 1.813rem !important; 
 }
 
-/* Font size for laptops and larger screens */
 @media (min-width: 1024px) {
   .responsive-text1 {
-    font-size: 2.25rem !important; /* Font size for laptops and larger screens */
+    font-size: 2.25rem !important; 
   }
 }
 
 
 .responsive-text2 {
-  font-size: 1.125rem !important; /* Font size for tablets and smaller */
+  font-size: 1.125rem !important; 
 }
 
-/* Font size for laptops and larger screens */
 @media (min-width: 1024px) {
   .responsive-text2 {
-    font-size: 1.375rem !important; /* Font size for laptops and larger screens */
+    font-size: 1.375rem !important; 
   }
 }
 
 
 .responsive-text3 {
-  font-size: .9rem !important; /* Font size for tablets and smaller */
+  font-size: .9rem !important; 
 }
 
-/* Font size for laptops and larger screens */
+
 @media (min-width: 1024px) {
   .responsive-text3 {
-    font-size: 1.1rem !important; /* Font size for laptops and larger screens */
+    font-size: 1.1rem !important; 
   }
 }
 
