@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>doc</title>
-</head>
-<body>
-  
+  </head>
+  <body>
+    <form onsubmit="return Validate()">
+      <input
+        type="text"
+        name="username"
+        id="user"
+        placeholder="enter username"
+      />
+      <p id="userError"></p>
+
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="enter email"
+      />
+      <p id="emailError"></p>
+
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="enter password"
+      />
+      <p id="passError"></p>
+
+      <button type="submit">check</button>
+    </form>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

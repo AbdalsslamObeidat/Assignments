@@ -153,7 +153,24 @@
 // console.log(largest(Arr));
 
 
-function flatten(){
-    
+function Validate(){
+    const user=document.getElementById("user").value;
+    const email=document.getElementById("email").value;
+    const pass=document.getElementById("password").value;
+    let isValid=true;
+    const userError=document.getElementById("userError")
+    const emailError=document.getElementById("emailError")
+    const passError=document.getElementById("passError")
 
+    if(user.length<3){userError.textContent="Username must be longer than 2 characters";
+        isValid=false;
+    }
+    if(!email.includes("@")){emailError.textContent="Email Address must be valid";
+        isValid=false;
+    }
+    if(pass.length<6){passError.textContent="Password must be longer than 5 characters";
+        isValid=false;
+    }
+
+    return isValid;
 }
