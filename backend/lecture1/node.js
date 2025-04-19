@@ -1,31 +1,31 @@
 import inquirer from 'inquirer';
-import qr from "qr-image";
-import fs, { writeFile } from "fs";
+import qr from 'qr-image';
+import fs from 'fs';
+
 inquirer
   .prompt([
     {
-        massage:"please enter url:",
-        name:"url"
+      message: "Please enter URL:",
+      name: "url"
     }
   ])
   .then((answers) => {
-    // Use user feedback for... whatever!!
     console.log(answers.url);
-    
- 
-var qr_svg = qr.image(answers.url);
-qr_svg.pipe(fs.createWriteStream('qr-img.svg'));
-fs,writeFile("qr-inputs",answers.url,(err)=>{if(err) throw err;})
- 
 
+    // Create QR image
+    const qr_svg = qr.image(answers.url);
+    qr_svg.pipe(fs.createWriteStream('qr-img.png'));
+
+    // Save input to a text file
+    fs.writeFile("qr-input.txt", answers.url, (err) => {
+      if (err) throw err;
+      console.log("URL saved to qr-input.txt");
+    });
   })
   .catch((error) => {
     if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
+      console.error("Prompt couldn't be rendered in the current environment");
     } else {
-      // Something else went wrong
+      console.error("Something went wrong:", error);
     }
   });
-  
-  
-  
