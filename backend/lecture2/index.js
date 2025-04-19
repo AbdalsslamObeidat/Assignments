@@ -1,32 +1,35 @@
-import express from "express"
+import express from "express";
+import bodyParser from "body-parser";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import morgan from "morgan";
+const app = express();
+//morgan('tiny');
+const port = 3000;
 
-const app =express();
-const port=3000;
+let userInfo = {
+  email: null,
+  password: null
+};
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/',(req,res)=>{
-    res.send("<h1>Hello</h1>")
+function saveToDb(req, res, next) {
+  userInfo.email = req.body.email;
+  userInfo.password = req.body.password;
+  next();
+}
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
 });
-app.get('/about',(req,res)=>{
-    res.send("<h1>Hello, from the about page</h1>")
-});
-app.get('/contact',(req,res)=>{
-    res.send("<h1>Hello, from the contact page</h1>")
-});
-app.get('/login',(req,res)=>{
-    res.send(`
-    <label>Email address</label>
-    <input type="email" id="email"
-    placeholder="name@example.com"/>
-
-    <label>Password</label>
-    <input type="password" id="pass"
-      placeholder="******"/>
-  `)
+app.use(saveToDb);
+app.post("/submit", (req ,res) => {
+  res.send(`<h1>Your Email ${userInfo.email} and password ${userInfo.password}</h1>`);
+  console.log(req.body);
 });
 
-
-app.listen(port ,()=>{
-
-    console.log("Server is running")
-})
+app.listen(port, () => {
+  console.log("Server is running");
+});
