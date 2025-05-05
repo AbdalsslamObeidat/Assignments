@@ -1,6 +1,30 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Blog</h1>
+    </header>
+    <main>
+      <a class="new" href="/new">New Post</a>
+      <ul>
+        <% posts.forEach((post,index) => {%>
 
- <button id="generateBtn">Generate Random Full Name</button>
- <div id="fullNameDisplay"></div>
- 
-<%- include('partials/footer') %>
+        <li>
+          <h2><%= post.title %></h2>
+          <p><%= post.content %></p>
+          <p class="b"><%=post.auther  %></p>
+          <p><%=post.date%></p>
+          <a href="/edit/<%= index %>">Edit Post</a>
+          <a href="/delete/<%= index %>">Delete Post</a>
+        </li>
+        <% }); %>
+      </ul>
+    </main>
+  </body>
+</html>
